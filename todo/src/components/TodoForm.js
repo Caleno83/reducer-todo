@@ -1,5 +1,4 @@
-import React, { useState, useReducer } from "react";
-import { initialState, reducer } from "../Reducers/Reducer";
+import React, { useState } from "react";
 
 const TodoForm = ({ dispatch }) => {
   const [newList, setNewList] = useState("");

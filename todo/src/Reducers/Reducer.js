@@ -1,5 +1,3 @@
-import TodoList from "../components/TodoList";
-
 export const initialState = [
   {
     item: "Learn about reducers",
