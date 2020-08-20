@@ -1,10 +1,24 @@
 import React from "react";
 
-const Todo = (props) => {
+function Todo({ list, dispatch }) {
+  console.log(list);
+  const toggleCompleted = () => {
+    dispatch({
+      type: "COMPLETED_TODO",
+      payload: list.id,
+    });
+  };
+
   return (
-    <div>
-    </div>
+    <>
+      <div
+        className={`list${list.completed ? " completed" : ""}`}
+        onClick={toggleCompleted}
+      >
+        <p>{list.item}</p>
+      </div>
+    </>
   );
-};
+}
 
 export default Todo;

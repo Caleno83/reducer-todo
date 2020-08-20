@@ -1,0 +1,7 @@
+.list.completed {
+    background-color: red;
+    width: 20%;
+    padding-left: 10px;
+    margin: 2px;
+    text-decoration: line-through;
+}

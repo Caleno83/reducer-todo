@@ -1,19 +1,22 @@
-import React from "react";
-import "./App.css";
+import React, { useState, useReducer } from "react";
+import "./components/Todo.css";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
+import { initialState, reducer } from "./Reducers/Reducer";
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <>
       <div>
         <h2>Jorge's To Do List</h2>
       </div>
       <div>
-        <TodoList />
+        <TodoList state={state} dispatch={dispatch} />
       </div>
       <div>
-        <TodoForm />
+        <TodoForm state={state} dispatch={dispatch} />
       </div>
     </>
   );
